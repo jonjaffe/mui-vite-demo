@@ -420,7 +420,10 @@ export default function Customers() {
                 backgroundColor: "action.hover",
               },
               "& .even": {
-                backgroundColor: "action.selected",
+                backgroundColor: (theme) =>
+                  theme.palette.mode === "dark"
+                    ? "rgba(255, 255, 255, 0.04)"
+                    : "rgba(0, 0, 0, 0.02)",
                 "&:hover": {
                   backgroundColor: "action.hover",
                 },
